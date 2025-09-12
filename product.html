@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindMate AI - Product</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--Header Section-->
+    <header class="header-section">
+      <div class="container nav">
+        <div class="logo">MindMate <b>AI</b></div>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+          <a href="blog.html">Blog</a>
+          <a href="community.html">Community</a>
+        </nav>
+        <a class="nav-callToAction" href="#chat">Try Demo</a>
+      </div>
+    </header>
+    <!--Main Content Area-->
+    <main>
+      <!--Chatbot Description Section-->
+      <section class="section container">
+        <h1>
+          CBT Chatbot
+          <img
+            src="images/chatbot.gif"
+            alt="animated image of a chatbot"
+            style="width: 52px; height: 52px"
+          />
+        </h1>
+        <p class="muted">
+          Meet MindMate AI Bot. They're here to help you with all things CBT and
+          mental wellbeing! Give the demo preview a try below. If you like what
+          you see, contact our
+          <a href="contact.html" style="text-decoration: underline"
+            >sales team</a
+          >
+          for plans and pricing!
+        </p>
+      </section>
+
+      <!--Chatbot Section-->
+      <section id="chat" class="section container">
+        <div class="product-card">
+          <div class="chat chat-inline" id="chatBox" aria-hidden="false">
+            <div class="chat-head">
+              <div class="logo">MindMate <b>Bot</b></div>
+              <button class="btn" id="clearChat">Clear</button>
+            </div>
+            <div class="window" id="chatWindow">
+              <div class="msg bot">
+                Hi, I’m here to help. Try typing “breathing exercise”.
+              </div>
+            </div>
+            <div class="composer">
+              <input id="chatInput" placeholder="Type a message (demo)" />
+              <button class="btn btn-solid" id="sendMsg">Send</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Mood Tracker Description Section-->
+      <section class="section container">
+        <h2>Mood Tracking</h2>
+        <p class="muted">
+          Track your mood daily to help better understand how you're feeling
+          over time. If you like what you see, contact our
+          <a href="contact.html" style="text-decoration: underline"
+            >sales team</a
+          >
+          for plans and pricing!
+        </p>
+      </section>
+
+      <!--Mood Tracker Section-->
+      <section class="section container">
+        <div class="product-card">
+          <form id="moodForm">
+            <label><input type="radio" name="mood" value="1" /> 1</label>
+            <label><input type="radio" name="mood" value="2" /> 2</label>
+            <label><input type="radio" name="mood" value="3" /> 3</label>
+            <label><input type="radio" name="mood" value="4" /> 4</label>
+            <label><input type="radio" name="mood" value="5" /> 5</label>
+            <button class="btn btn-solid" type="submit">Add Check-in</button>
+          </form>
+
+          <div class="mood-bar-wrap">
+            <div class="mood-bar-fill" id="moodBar"></div>
+          </div>
+          <p class="small muted" id="moodResult">No check-in yet.</p>
+        </div>
+      </section>
+
+      <!--User Benefits Section-->
+      <section id="benefits" class="section container">
+        <h2>User Benefits</h2>
+        <div class="benefits-grid">
+          <article class="benefit-card">
+            <div class="benefit-icon">
+              <img
+                src="images/brain.gif"
+                alt="an animated image of someone thinking"
+              />
+            </div>
+            <div>
+              <h3>Cognitive Behavioural Therapy</h3>
+              <p class="muted">
+                Applying CBT techniques to your daily life can result in
+                significant improvements!
+              </p>
+            </div>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon">
+              <img
+                src="images/devices.gif"
+                alt="an animated image showing different devices"
+              />
+            </div>
+            <div>
+              <h3>Wherever, Whenever, No Matter the Weather!</h3>
+              <p class="muted">
+                MindMate AI is available 24/7 on your device of choice.
+              </p>
+            </div>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon">
+              <img
+                src="images/judge.gif"
+                alt="an animated image showing a gavel"
+              />
+            </div>
+            <div>
+              <h3>Judgement Free</h3>
+              <p class="muted">
+                MindMate AI will never judge you! It's here to help you live
+                better.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <a class="btn btn-solid" href="contact.html" style="margin-top: 50px"
+          >Contact Our Sales Team</a
+        >
+      </section>
+    </main>
+
+    <!--Footer Section-->
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <div class="logo" style="color: white">MindMate <b>AI</b></div>
+          <div class="muted small">Email: mindmate@ai.com</div>
+          <div class="muted small">Phone: +27-71-234-5678</div>
+        </div>
+        <div>
+          <strong>What We Do</strong>
+          <a href="product.html">Products</a>
+          <a href="services.html">Services</a>
+          <a href="#">Pricing</a>
+        </div>
+        <div>
+          <strong>Who We Are</strong>
+          <a href="index.html#about">About</a>
+          <a href="blog.html">Blog</a>
+          <a href="community.html">Community</a>
+        </div>
+        <div>
+          <strong>Socials</strong>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">BlueSky</a>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindMate AI – Contact</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--Header Section-->
+    <header class="header-section">
+      <div class="container nav">
+        <div class="logo">MindMate <b>AI</b></div>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="product.html">Products</a>
+          <a href="blog.html">Blog</a>
+          <a href="community.html">Community</a>
+        </nav>
+        <a class="nav-callToAction" href="product.html">Get Started</a>
+      </div>
+    </header>
+    <!--Main Content Area-->
+    <main>
+      <!--Hero Section -->
+      <section class="hero container">
+        <h1>
+          Contact
+          <img
+            src="images/contact.gif"
+            alt="an animated image representing a blog"
+            style="width: 52px; height: 52px"
+          />
+        </h1>
+        <p>
+          Reach Sales or Support. We will reply to the message as soon as
+          possible!
+        </p>
+      </section>
+
+      <!--Contact form Section-->
+      <section class="section container">
+        <div class="product-card">
+          <form id="contactForm" class="form" novalidate>
+            <div class="form-row">
+              <label for="name">Full name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Your name"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <label for="dept">Department</label>
+              <select id="dept" name="department" required>
+                <option value="">Select a department</option>
+                <option value="Sales">Sales</option>
+                <option value="Support">Support</option>
+              </select>
+              <div class="hint small muted">
+                Sales for pricing and plans. Support for help with MindMate AI.
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <input
+                id="subject"
+                name="subject"
+                type="text"
+                placeholder="How can we help?"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                placeholder="Write your message…"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-row">
+              <label class="checkbox">
+                <input id="consent" type="checkbox" required />
+                I understand that my data will be used to contact me about
+                MindMate AI.
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn" type="reset">Clear</button>
+              <button class="btn btn-solid" type="submit">Send message</button>
+            </div>
+
+            <p id="formStatus" class="success" hidden></p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <!--Footer Section-->
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <div class="logo" style="color: white">MindMate <b>AI</b></div>
+          <div class="muted small">Email: mindmate@ai.com</div>
+          <div class="muted small">Phone: +27-71-234-5678</div>
+        </div>
+        <div>
+          <strong>What We Do</strong>
+          <a href="product.html">Products</a>
+          <a href="services.html">Services</a>
+          <a href="#">Pricing</a>
+        </div>
+        <div>
+          <strong>Who We Are</strong>
+          <a href="index.html#about">About</a>
+          <a href="blog.html">Blog</a>
+          <a href="community.html">Community</a>
+        </div>
+        <div>
+          <strong>Socials</strong>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">BlueSky</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

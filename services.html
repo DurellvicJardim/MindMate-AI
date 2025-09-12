@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MindMate AI – Services</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!--Header Section-->
+    <header class="header-section">
+      <div class="container nav">
+        <div class="logo">MindMate <b>AI</b></div>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="product.html">Products</a>
+          <a href="contact.html">Contact</a>
+          <a href="blog.html">Blog</a>
+          <a href="community.html">Community</a>
+        </nav>
+        <a class="nav-callToAction" href="product.html">Get Started</a>
+      </div>
+    </header>
+    <!--Main Content Area-->
+    <main>
+      <!--Hero/intro Section-->
+      <section class="hero container">
+        <h1>
+          Services
+          <img
+            src="images/services.gif"
+            alt="an animated image displaying services"
+            style="width: 52px; height: 52px"
+          />
+        </h1>
+        <p>
+          Daily meditations, AI coach to guide you through MindMate AI, and self
+          care routines we recommend!
+        </p>
+        <div class="callToAction-row">
+          <a class="btn btn-solid" href="#meditations"
+            >Start 1-min meditation</a
+          >
+          <a class="btn" href="contact.html#booking">Contact us</a>
+        </div>
+      </section>
+
+      <!--Daily Meditations Section-->
+      <section id="meditations" class="section container">
+        <h2>Daily Meditations</h2>
+        <p class="muted">
+          Try our daily meditations service! Set a short timer and focus on your
+          breath. When it ends, say your affirmation. For more, contact the
+          <a href="contact.html" style="text-decoration: underline"
+            >sales team</a
+          >
+          for our plans and pricing!
+        </p>
+
+        <div class="product-card timer-card">
+          <div id="timerDisplay" class="timer-display">01:00</div>
+
+          <div class="presets">
+            <button class="btn preset" data-sec="60">1m</button>
+            <button class="btn preset" data-sec="180">3m</button>
+            <button class="btn preset" data-sec="300">5m</button>
+          </div>
+
+          <div class="buttons-row">
+            <button id="startPauseBtn" class="btn btn-solid">Start</button>
+            <button id="resetBtn" class="btn">Reset</button>
+          </div>
+
+          <div
+            id="affirmationBox"
+            class="affirmation"
+            aria-live="polite"
+            hidden
+          ></div>
+        </div>
+
+        <p class="small muted">
+          Want this and more? Contact the
+          <a href="contact.html" style="text-decoration: underline"
+            >sales team</a
+          >
+          for our plans and pricing!
+        </p>
+      </section>
+
+      <!--AI Coach Section-->
+      <section id="coach" class="section container">
+        <h2>AI Coach</h2>
+        <p class="muted">
+          Hey, need help on everything MindMate AI? Chat to me below!
+        </p>
+
+        <div class="product-card">
+          <div class="chat chat-inline" id="coachChatBox" aria-hidden="false">
+            <div class="chat-head">
+              <div class="logo">AI <b>Coach</b></div>
+              <button class="btn" id="coachClear">Clear</button>
+            </div>
+
+            <div class="window" id="coachChatWindow">
+              <div class="msg bot">
+                Hi. I'm the MindMate AI Coach! Let me help you navigate through
+                everything MindMate AI has to offer. Try “meditation”, “mood
+                tracking”, “contact”, or “chatbot”.
+              </div>
+            </div>
+
+            <div class="composer">
+              <input id="coachInput" placeholder="Ask for help" />
+              <button class="btn btn-solid" id="coachSend">Send</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Self Care Section-->
+      <section id="routines" class="section container">
+        <h2>Self-Care Routines</h2>
+        <div class="routine-grid">
+          <article class="routine-card">
+            <h3>Nature Routine</h3>
+            <ul>
+              <li>Go on a bush walk.</li>
+              <li>Listen to the birds sing.</li>
+              <li>Let your feet touch the grass.</li>
+            </ul>
+            <a class="small" href="contact.html#booking">Use this template →</a>
+          </article>
+          <article class="routine-card">
+            <h3>Sleep Routine</h3>
+            <ul>
+              <li>Turn off all distractions 50 minutes before bed.</li>
+              <li>Reflect on the positive aspects of your life.</li>
+              <li>Lie down in complete darkness and do deep breathing.</li>
+            </ul>
+            <a class="small" href="contact.html#booking">Use this template →</a>
+          </article>
+          <article class="routine-card">
+            <h3>Morning Routine</h3>
+            <ul>
+              <li>Do mobility stretches.</li>
+              <li>Eat a well balanced breakfast.</li>
+              <li>Repeat positive affirmations in the bathroom mirror.</li>
+            </ul>
+            <a class="small" href="contact.html#booking">Use this template →</a>
+          </article>
+        </div>
+      </section>
+
+      <!--Booking Enticing Section-->
+      <section class="booking-band">
+        <div class="container booking-inner">
+          <h3>Like what you've seen so far?</h3>
+          <p class="muted">
+            Let's chat about your improving your mental wellbeing with MindMate
+            AI.
+          </p>
+          <a class="btn btn-solid" href="contact.html#booking"
+            >Talk to our sales team</a
+          >
+        </div>
+      </section>
+    </main>
+    <!--Footer Section-->
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <div class="logo" style="color: white">MindMate <b>AI</b></div>
+          <div class="muted small">Email: mindmate@ai.com</div>
+          <div class="muted small">Phone: +27-71-234-5678</div>
+        </div>
+        <div>
+          <strong>What We Do</strong>
+          <a href="product.html">Products</a>
+          <a href="services.html">Services</a>
+          <a href="#">Pricing</a>
+        </div>
+        <div>
+          <strong>Who We Are</strong>
+          <a href="index.html#about">About</a>
+          <a href="blog.html">Blog</a>
+          <a href="community.html">Community</a>
+        </div>
+        <div>
+          <strong>Socials</strong>
+          <a href="#">Instagram</a>
+          <a href="#">Facebook</a>
+          <a href="#">BlueSky</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
