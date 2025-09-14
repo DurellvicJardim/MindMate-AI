@@ -1,21 +1,16 @@
-/*Chatbot Demo*/
-
-// Grab elements by ID
 const chatWindow = document.getElementById("chatWindow");
 const chatInput = document.getElementById("chatInput");
 const sendBtn = document.getElementById("sendMsg");
 const clearBtn = document.getElementById("clearChat");
 
-// Helper: append a message bubble
 function addMessage(text, who) {
   const div = document.createElement("div");
-  div.className = "msg " + (who || "bot"); // 'user' or 'bot'
+  div.className = "msg " + (who || "bot");
   div.textContent = text;
   chatWindow.appendChild(div);
-  chatWindow.scrollTop = chatWindow.scrollHeight; // scroll to bottom
+  chatWindow.scrollTop = chatWindow.scrollHeight;
 }
 
-// Helper: very simple scripted reply
 function botReply(userText) {
   const t = userText.toLowerCase();
   if (t.includes("breath"))
@@ -26,20 +21,17 @@ function botReply(userText) {
   return "You can ask for a breathing exercise, a mood check-in, or a small goal.";
 }
 
-// Wire up buttons (guard in case this JS loads on other pages)
 if (sendBtn && chatInput && chatWindow) {
   sendBtn.addEventListener("click", function () {
     const text = chatInput.value.trim();
     if (!text) return;
-    addMessage(text, "user"); // show what the user typed
+    addMessage(text, "user");
     chatInput.value = "";
     setTimeout(function () {
-      // bot replies after a short delay
       addMessage(botReply(text), "bot");
     }, 400);
   });
 
-  // Press Enter to send
   chatInput.addEventListener("keydown", function (e) {
     if (e.key === "Enter") sendBtn.click();
   });
@@ -52,38 +44,35 @@ if (clearBtn && chatWindow) {
   });
 }
 
-/*Mood Tracker*/
 const moodForm = document.getElementById("moodForm");
 const moodBar = document.getElementById("moodBar");
 const moodText = document.getElementById("moodResult");
 
-let moodTotal = 0; // sum of all ratings
-let moodCount = 0; // number of check-ins
+let moodTotal = 0;
+let moodCount = 0;
 
 if (moodForm && moodBar && moodText) {
   moodForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // find the selected radio
     const selected = moodForm.querySelector('input[name="mood"]:checked');
     if (!selected) return;
 
-    const val = parseInt(selected.value, 10); // 1..5
+    const val = parseInt(selected.value, 10);
     moodTotal += val;
     moodCount += 1;
 
-    const avg = moodTotal / moodCount; // average 1..5
-    const pct = (avg / 5) * 100; // convert to 0..100%
+    const avg = moodTotal / moodCount;
+    const pct = (avg / 5) * 100;
 
     moodBar.style.width = pct + "%";
     moodText.textContent =
       "Today: " + val + "/5  •  Average: " + avg.toFixed(1) + "/5";
 
-    moodForm.reset(); // clear selection after submit
+    moodForm.reset();
   });
 }
 
-/* ===== Services: Meditation Timer ===== */
 const timerDisplay = document.getElementById("timerDisplay");
 const startPauseBtn = document.getElementById("startPauseBtn");
 const resetBtn = document.getElementById("resetBtn");
@@ -99,7 +88,7 @@ const AFFIRMATIONS = [
   "I am in charge of how I feel and I choose to feel happy.",
 ];
 
-let lastPresetSec = 60; // default 1 minute
+let lastPresetSec = 60;
 let remainingSec = lastPresetSec;
 let running = false;
 let timerId = null;
@@ -137,7 +126,6 @@ function tick() {
   }
 }
 
-/* Guard so this only runs on Services page */
 if (
   timerDisplay &&
   startPauseBtn &&
@@ -179,7 +167,6 @@ if (
   });
 }
 
-/* ===== Services: AI Coach chat (scripted) ===== */
 const coachWin = document.getElementById("coachChatWindow");
 const coachIn = document.getElementById("coachInput");
 const coachSend = document.getElementById("coachSend");
@@ -238,7 +225,6 @@ function coachReply(t) {
     };
   }
 
-  // default help
   return {
     text: "I can help you start a meditation, see mood tracking, open the chatbot demo, or book a chat with our sales team.",
     actions: [
@@ -249,7 +235,6 @@ function coachReply(t) {
   };
 }
 
-/* Guard so this runs only on Services when the coach chat exists */
 if (coachWin && coachIn && coachSend) {
   coachSend.addEventListener("click", function () {
     const v = coachIn.value.trim();
@@ -276,15 +261,13 @@ if (coachClear && coachWin) {
   });
 }
 
-/* ===== Contact form (demo) ===== */
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
 
 if (contactForm && formStatus) {
   contactForm.addEventListener("submit", function (e) {
-    e.preventDefault(); // demo only
+    e.preventDefault();
 
-    // Simple required check
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const dept = document.getElementById("dept").value;
@@ -302,15 +285,12 @@ if (contactForm && formStatus) {
       return;
     }
 
-    // Show confirmation
     formStatus.hidden = false;
     formStatus.textContent =
       "Thanks, " + name + ". Your message to " + dept + " was received.";
 
-    // Reset form
     contactForm.reset();
 
-    // Scroll to the status for visibility
     formStatus.scrollIntoView({ behavior: "smooth", block: "center" });
   });
 }

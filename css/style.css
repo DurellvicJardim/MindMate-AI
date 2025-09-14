@@ -275,6 +275,7 @@ footer {
   grid-template-columns: 1fr;
   gap: 16px;
 }
+
 .testimonials-card {
   display: flex;
   gap: 14px;
@@ -313,14 +314,14 @@ footer {
   border-radius: 12px;
   padding: 24px;
   background: #fff;
-  max-width: 640px;
+  max-width: 520px;
   margin: 0 auto;
   text-align: center;
 }
 
 .pricing-joke {
   display: inline-block;
-  padding: 20px;
+  padding: 8px 10px;
   border-radius: 999px;
   background: #d0fafa;
   color: #33cccc;
@@ -330,7 +331,7 @@ footer {
 }
 
 .price {
-  font-size: 44px;
+  font-size: 40px;
   margin: 8px 0 30px;
 }
 
@@ -364,7 +365,6 @@ footer {
 .pricing-card .pricing-btn {
   margin: 0 0 40px;
 }
-
 /*FOOTER section styling*/
 .footer-grid {
   display: grid;
@@ -828,6 +828,56 @@ footer {
   color: #0f766e;
 }
 
+/*newsletter.html page styling*/
+.newsletter-hero {
+  text-align: center;
+}
+.issue-badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  background: #d0fafa;
+  color: #33cccc;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.tips-list {
+  padding-left: 18px;
+}
+.tips-list li {
+  margin: 6px 0;
+}
+
+.media-box {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  padding: 12px;
+}
+.media-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.subscribe-box {
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  padding: 18px;
+}
+
 /*RESPONSIVE STYLING BREAKPOINTS*/
 @media (max-width: 700px) {
   .nav {
@@ -874,6 +924,12 @@ footer {
     justify-self: center;
     margin-left: 0;
     max-width: 220px;
+  }
+}
+
+@media (max-width: 900px) {
+  .news-grid {
+    grid-template-columns: 1fr;
   }
 }
 
